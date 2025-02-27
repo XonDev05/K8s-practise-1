@@ -1,0 +1,2 @@
+NAME             ENDPOINTS                              AGE
+flask-nodeport   10.233.66.211:5000,10.233.69.41:5000   3m45s

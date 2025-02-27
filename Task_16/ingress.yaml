@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  name: flask-ingres
+  namespace: x-umarov
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: x-umarov.sts404.uz
+      http:
+        paths:
+          - backend:
+              service:
+                name: clusterip-service
+                port:
+                  number: 80
+            path: /check-ingress
+            pathType: Exact
+status:
+  loadBalancer: {}
